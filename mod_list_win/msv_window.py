@@ -119,12 +119,13 @@ class ShowWindow(QtWidgets.QMainWindow, msv.Ui_MainWindow):
         if not sel_obj:
             raise RuntimeError('选择一个层级导出')
         elif len(sel_obj) == 1:
+            namespace = sel_obj[0].namespace()
             if status == 'old':
                 self.old_hierarchy = hierarchy_func.get_hierarchy(sel_obj[0])
-                self.tree_model1.data_show(self.old_hierarchy)
+                self.tree_model1.set_data(self.old_hierarchy, namespace=namespace, parent=None)
             elif status == 'new':
                 self.new_hierarchy = hierarchy_func.get_hierarchy(sel_obj[0])
-                self.tree_model2.data_show(self.new_hierarchy)
+                self.tree_model2.set_data(self.new_hierarchy, namespace=namespace, parent=None)
             if export:
                 file_name = os.path.split(frequency_func.get_file_path())[-1].rsplit('.', 1)[0]
                 if not file_name:
@@ -138,11 +139,9 @@ class ShowWindow(QtWidgets.QMainWindow, msv.Ui_MainWindow):
 
     def clear_data(self):
         self.stackedWidget.setCurrentIndex(0)
-        self.old_hierarchy = {}
-        self.new_hierarchy = {}
-        self.short_objs = {}
-        self.added_objs = []
-        self.disorder_objs = []
+        self.tree_model1.clear()
+        self.tree_model2.clear()
+
 
 
 if __name__ == "__main__":
