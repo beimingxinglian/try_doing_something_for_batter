@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'tree_model.ui'
+# Form implementation generated from reading ui file 'tree_model_widget.ui'
 #
-# Created: Sat Aug  1 11:32:38 2020
+# Created: Sat Aug  1 20:43:56 2020
 #      by: pyside2-uic  running on PySide2 2.0.0~alpha0
 #
 # WARNING! All changes made in this file will be lost!
@@ -15,12 +15,12 @@ class Ui_Form(object):
         Form.resize(400, 448)
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setObjectName("gridLayout")
-        self.treeView = QtWidgets.QTreeView(Form)
-        self.treeView.setObjectName("treeView")
-        self.gridLayout.addWidget(self.treeView, 1, 0, 1, 1)
-        self.treeView_2 = QtWidgets.QTreeView(Form)
-        self.treeView_2.setObjectName("treeView_2")
-        self.gridLayout.addWidget(self.treeView_2, 1, 1, 1, 1)
+        self.old_view = QtWidgets.QTreeView(Form)
+        self.old_view.setObjectName("old_view")
+        self.gridLayout.addWidget(self.old_view, 1, 0, 1, 1)
+        self.new_view = QtWidgets.QTreeView(Form)
+        self.new_view.setObjectName("new_view")
+        self.gridLayout.addWidget(self.new_view, 1, 1, 1, 1)
         self.label = QtWidgets.QLabel(Form)
         self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>694</width>
-    <height>447</height>
+    <width>442</width>
+    <height>394</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,49 +20,49 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label1">
           <property name="text">
            <string/>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="except_but">
+         <widget class="QPushButton" name="export_but">
           <property name="text">
            <string>导出所选层级</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_7">
+         <widget class="QPushButton" name="import_old_but">
+          <property name="text">
+           <string>导入old层级</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label3">
           <property name="text">
            <string/>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="import_but">
+         <widget class="QPushButton" name="load_old_but">
           <property name="text">
            <string>加载old层级</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_8">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="import_but_2">
+         <widget class="QPushButton" name="load_new_but">
           <property name="text">
            <string>加载new层级</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_10">
+         <widget class="QLabel" name="label4">
           <property name="text">
            <string/>
           </property>
@@ -76,14 +76,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_9">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="clear_but">
           <property name="text">
            <string>clear</string>
           </property>
@@ -104,15 +97,6 @@
         </item>
        </layout>
       </item>
-      <item>
-       <widget class="QStackedWidget" name="stackedWidget">
-        <property name="currentIndex">
-         <number>1</number>
-        </property>
-        <widget class="QWidget" name="tree_page"/>
-        <widget class="QWidget" name="check_page"/>
-       </widget>
-      </item>
      </layout>
     </item>
    </layout>
@@ -122,7 +106,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>694</width>
+     <width>442</width>
      <height>23</height>
     </rect>
    </property>

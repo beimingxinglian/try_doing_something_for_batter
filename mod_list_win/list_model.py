@@ -13,7 +13,7 @@ class ListModel(QtCore.QAbstractListModel):
 
     def data(self, index=QtCore.QModelIndex(), role=QtCore.Qt.DisplayRole):
         if role == QtCore.Qt.DisplayRole:
-            content = self.list_data[index.row()]
+            content = self.list_data[index.row()].split('|')[-1]
             return content
         if role == QtCore.Qt.ForegroundRole:
             return QtGui.QColor(255, 0, 0)
