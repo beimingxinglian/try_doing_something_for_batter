@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: GBK -*-
 from PySide2 import QtCore, QtGui, QtWidgets
 
 from func_library import frequency_func
@@ -12,32 +12,26 @@ class UiMainWindow(QtWidgets.QMainWindow):
 
     def setupUi(self):
         self.setObjectName("box_window")
-        self.setWindowTitle('ç¾Šç¥ç›’å­ä»¿åˆ¶ç‰ˆ')
+        self.setWindowTitle(u'ÑòÉñºĞ×Ó·ÂÖÆ°æ')
         self.resize(500, 800)
 
         self.centralwidget = QtWidgets.QWidget(self)
-        self.centralwidget.setGeometry(0, 0, 500, 800)
-        self.centralwidget.setObjectName("centralwidget")
-
+        self.setCentralWidget(self.centralwidget)
         self.window_layout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.setLayout(self.window_layout)
 
-
-        # todoï¼šä¸Šä¸‹åˆ†å‰²ï¼Œå¸ƒå±€éšçª—å£ç¼©æ”¾ï¼Œ åŠ¨æ€å¢åŠ æŒ‰é’®
-        topleft = QtWidgets.QFrame()
-        topleft.setFrameShape(QtWidgets.QFrame.StyledPanel)
-
-        bottom = QtWidgets.QFrame()
-        bottom.setFrameShape(QtWidgets.QFrame.StyledPanel)
-
-        splitter1 = QtWidgets.QSplitter(QtCore.Qt.Horizontal)
-        textedit = QtWidgets.QTextEdit()
-        splitter1.addWidget(topleft)
-        splitter1.addWidget(textedit)
-        splitter1.setSizes([100,200])
         splitter2 = QtWidgets.QSplitter(QtCore.Qt.Vertical)
-        splitter2.addWidget(splitter1)
-        splitter2.addWidget(bottom)
-        self.window_layout .addWidget(splitter2)
-        self.setLayout(self.window_layout )
+        self.window_layout.addWidget(splitter2)
 
+        # todo£ºÉÏÏÂ·Ö¸î£¬²¼¾ÖËæ´°¿ÚËõ·Å£¬ ¶¯Ì¬Ôö¼Ó°´Å¥
+        self.bottom = QtWidgets.QFrame()
+        self.bottom.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        splitter2.addWidget(self.bottom)
+
+        textedit = QtWidgets.QTextEdit()
+        splitter2.addWidget(textedit)
+
+        label = QtWidgets.QLabel()
+        label.setFrameStyle(QtWidgets.QFrame.Panel | QtWidgets.QFrame.Raised)
+        label.setLineWidth(2)
+        splitter2.addWidget(label)
