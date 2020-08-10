@@ -42,12 +42,13 @@ class ShowWindow(QtWidgets.QMainWindow, msv.Ui_MainWindow):
         self.tree_model_widget = TreeWidget()
         self.maya_mainwindow = frequency_func.maya_mainwindow()
         super(ShowWindow, self).__init__(self.maya_mainwindow)
+        self.setupUi(self)
+        self.setObjectName('mod_list_window')
         self.old_hierarchy = {}
         self.new_hierarchy = {}
         self.short_objs = {}
         self.added_objs = []
         self.disorder_objs = []
-        self.setupUi(self)
         self.setupUi2()
         self.singal_connect()
 

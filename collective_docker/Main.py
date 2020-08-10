@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import sys
 from PySide2 import QtCore
 sys.path.append(r'D:\github\try_doing_something_for_batter')
@@ -17,4 +16,3 @@ if box_window:
 else:
     box_window = box_UI.UiMainWindow()
     box_window.show()
-
