@@ -10,13 +10,13 @@ reload(description)
 
 
 class DescriptionWidget(QtWidgets.QWidget, description.Ui_Form):
-    def __init__(self, parent):
+    def __init__(self, parent=None):
         super(DescriptionWidget, self).__init__(parent=parent)
         self.setupUi(self)
 
 
 class UiMainWindow(QtWidgets.QWidget):
-    def __init__(self, parent):
+    def __init__(self, parent=None):
         self.description_widget = DescriptionWidget(parent)
         super(UiMainWindow, self).__init__(parent=parent)
         self.setupUi()
